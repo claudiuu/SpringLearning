@@ -6,5 +6,9 @@
 
 	<bean id="myorg"
 		class="com.github.claudiuu.springdemo.Organization">
+		<constructor-arg index="1" value="1929"></constructor-arg>
+		<constructor-arg value="BMW" index="0"></constructor-arg>
+		<property name="employees" value="35000"></property>
+		<property name="address" value="Munich, Germany"></property>
 	</bean>
 </beans>

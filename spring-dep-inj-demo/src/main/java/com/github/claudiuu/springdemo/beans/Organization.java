@@ -1,4 +1,4 @@
-package com.github.claudiuu.springdemo;
+package com.github.claudiuu.springdemo.beans;
 
 /**
  * @author claudiu
@@ -8,26 +8,25 @@ public class Organization {
 
 	private String name;
 	private String address;
+	private String slogan;
 	private int yearOfInc;
 	private int employees;
+	private IBusinessService service;
 	
 	/**
 	 * @param name
 	 * @param yearCreated
 	 */
-	public Organization(String name, String address, int yearCreated, int employees) {
-		super();
+	public Organization(String name, int yearCreated) {
 		this.name = name;
-		this.address = address;
 		this.yearOfInc = yearCreated;
-		this.employees = employees;
 	}
 
 	/**
 	 * 
 	 */
-	public void corporateSlogan() {
-		System.out.println("We want a lot of money");
+	public String corporateSlogan() {
+		return slogan;
 	}
 
 	/* (non-Javadoc)
@@ -96,5 +95,40 @@ public class Organization {
 	 */
 	public void setEmployees(int employees) {
 		this.employees = employees;
+	}
+
+	/**
+	 * @return the service
+	 */
+	public IBusinessService getService() {
+		return service;
+	}
+
+	/**
+	 * @param service the service to set
+	 */
+	public void setService(IBusinessService service) {
+		this.service = service;
+	}
+
+	/**
+	 * @return the slogan
+	 */
+	public String getSlogan() {
+		return slogan;
+	}
+
+	/**
+	 * @param slogan the slogan to set
+	 */
+	public void setSlogan(String slogan) {
+		this.slogan = slogan;
+	}
+	
+	/**
+	 * @return
+	 */
+	public String describeService() {
+		return service.offerService(name);
 	}
 }

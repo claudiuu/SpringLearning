@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="myorg"
+		class="com.github.claudiuu.springdemo.beans.Organization">
+		<constructor-arg index="1" value="1994"></constructor-arg>
+		<constructor-arg value="Amazon" index="0"></constructor-arg>
+		<property name="employees" value="35000"></property>
+		<property name="address" value="Munich, Germany"></property>
+		<property name="slogan" value="we are the best"></property>
+		<property name="service" ref="cloudService"></property>
+	</bean>
+	<bean id="cloudService"
+		class="com.github.claudiuu.springdemo.beans.CloudComputingService">
+	</bean>
+	<bean id="ecommerceService" class="com.github.claudiuu.springdemo.beans.EcommerceService">
+	</bean>
+	
+	<bean id="mydept" class="com.github.claudiuu.springdemo.beans.Department">
+		<constructor-arg name="organization" ref="myorg"></constructor-arg>
+		<property name="deptName" value="HR"></property>
+		
+	</bean>
+</beans>

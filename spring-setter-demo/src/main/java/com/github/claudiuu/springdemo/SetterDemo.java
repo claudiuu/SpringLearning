@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author claudiu
  *
  */
-public class IOCDemo2 {
+public class SetterDemo {
 
 	public static void main(String[] args) {
 		

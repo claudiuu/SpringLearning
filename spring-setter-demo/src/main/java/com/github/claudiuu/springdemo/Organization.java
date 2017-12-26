@@ -15,7 +15,7 @@ public class Organization {
 	 * @param name
 	 * @param yearCreated
 	 */
-	public Organization(String name, String address, int yearCreated, int employees) {
+	public Organization(String name, int yearCreated) {
 		super();
 		this.name = name;
 		this.address = address;
